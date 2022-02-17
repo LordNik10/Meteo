@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Meteo/static/css/main.eb7ca73d.css",
-    "main.js": "/Meteo/static/js/main.4fb966de.js",
+    "main.js": "/Meteo/static/js/main.31de615a.js",
     "static/js/787.e2fd980d.chunk.js": "/Meteo/static/js/787.e2fd980d.chunk.js",
     "static/media/pioggia1.gif": "/Meteo/static/media/pioggia1.33f755519cba10b3637a.gif",
     "static/media/background-meteo3.jpg": "/Meteo/static/media/background-meteo3.b0abc1a92bb63fdb0945.jpg",
@@ -10,11 +10,11 @@
     "static/media/nuvoloso1.png": "/Meteo/static/media/nuvoloso1.1eb50f6b5bb87b1a162b.png",
     "index.html": "/Meteo/index.html",
     "main.eb7ca73d.css.map": "/Meteo/static/css/main.eb7ca73d.css.map",
-    "main.4fb966de.js.map": "/Meteo/static/js/main.4fb966de.js.map",
+    "main.31de615a.js.map": "/Meteo/static/js/main.31de615a.js.map",
     "787.e2fd980d.chunk.js.map": "/Meteo/static/js/787.e2fd980d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb7ca73d.css",
-    "static/js/main.4fb966de.js"
+    "static/js/main.31de615a.js"
   ]
 }
