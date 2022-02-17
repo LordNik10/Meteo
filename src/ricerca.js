@@ -34,7 +34,7 @@ const search2 = () => {
   console.log('Inizio search');
   let apiKey = '20f5958910e09812a97911d595ec0c3b';
   let x = document.getElementById('city').value;
-  let requestUrl ='http://api.openweathermap.org/data/2.5/forecast?q='+x+'&appid='+apiKey;
+  let requestUrl ='https://api.openweathermap.org/data/2.5/forecast?q='+x+'&appid='+apiKey;
   var weather1;
   var weather2;
   var weather3;
