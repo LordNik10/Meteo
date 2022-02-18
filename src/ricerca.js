@@ -46,7 +46,7 @@ const search2 = () => {
   request.open('GET', requestUrl, true);
   request.onload = function(){
       var data = JSON.parse(this.response);
-      console.log(data);
+
       //Salvo meteo per il giorno 1-2-3
       weather1 = data.list[0].weather[0].description;
       weather2 = data.list[8].weather[0].description;
