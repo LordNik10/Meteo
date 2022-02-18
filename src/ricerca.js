@@ -31,7 +31,6 @@ const [img23, setImg23] = useState("");
 
 
 const search2 = () => {
-  console.log('Inizio search');
   let apiKey = '20f5958910e09812a97911d595ec0c3b';
   let x = document.getElementById('city').value;
   let requestUrl ='https://api.openweathermap.org/data/2.5/forecast?q='+x+'&appid='+apiKey;
@@ -47,7 +46,7 @@ const search2 = () => {
   request.open('GET', requestUrl, true);
   request.onload = function(){
       var data = JSON.parse(this.response);
-
+      console.log(data);
       //Salvo meteo per il giorno 1-2-3
       weather1 = data.list[0].weather[0].description;
       weather2 = data.list[8].weather[0].description;
@@ -56,23 +55,11 @@ const search2 = () => {
       //Salvo temperatura per il giorno 1-2-3
       temp1 = data.list[0].main.temp;
       temp1 = parseInt(temp1)-273;
-      temp1 = data.list[0].main.temp;
-      temp1 = parseInt(temp1)-273;
-      temp1 = data.list[0].main.temp;
-      temp1 = parseInt(temp1)-273;
 
-      temp2 = data.list[0].main.temp;
-      temp2 = parseInt(temp2)-273;
-      temp2 = data.list[0].main.temp;
-      temp2 = parseInt(temp2)-273;
-      temp2 = data.list[0].main.temp;
+      temp2 = data.list[8].main.temp;
       temp2 = parseInt(temp2)-273;
 
-      temp3 = data.list[0].main.temp;
-      temp3 = parseInt(temp3)-273;
-      temp3 = data.list[0].main.temp;
-      temp3 = parseInt(temp3)-273;
-      temp3 = data.list[0].main.temp;
+      temp3 = data.list[16].main.temp;
       temp3 = parseInt(temp3)-273;
  
       //Ricavo la data
@@ -321,14 +308,13 @@ const search2 = () => {
                   im3 = "";
               }
 
-      console.log('tempi1: '+temp1);
       meteo[0].id=0;
       meteo[0].gradi=temp1+'°';
       meteo[0].giorno=mesegiorno1[2]+' '+month1;
       meteo[0].nome=x;
       meteo[0].img=im1;
       meteo[0].img2=termometro; 
-      console.log('Meteo gradi: '+meteo[0].gradi);
+
       meteo[1].id=1;
       meteo[1].gradi=temp2+'°';
       meteo[1].giorno=mesegiorno2[2]+' '+month2;
@@ -356,7 +342,7 @@ const search2 = () => {
   setNome1(nome1);
   setImg1(img1);
   setImg21(img21);
-  console.log('gradi1: '+gradi1);
+
   //Giorno 2
   var gradi2 = meteo[1].gradi;
   var giorno2 = meteo[1].giorno;
