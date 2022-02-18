@@ -4,6 +4,7 @@ import nuvoloso from './img/nuvoloso1.png';
 import nubisparse from './img/nubi-sparse1.gif';
 import sole from './img/sole1.gif';
 import pioggia from './img/pioggia1.gif';
+import neve from './img/neve1.gif';
 import termometro from './img/termometro.png'
 import Citta from "./citta";
 
@@ -46,7 +47,7 @@ const search2 = () => {
   request.open('GET', requestUrl, true);
   request.onload = function(){
       var data = JSON.parse(this.response);
-
+        console.log(data);
       //Salvo meteo per il giorno 1-2-3
       weather1 = data.list[0].weather[0].description;
       weather2 = data.list[8].weather[0].description;
@@ -250,6 +251,9 @@ const search2 = () => {
               case ('light rain'):
                   im1 = pioggia;
                   break;
+              case ('light snow'):
+                  im1 = neve;
+                  break;
               default:
                   im1 = "";
               }
@@ -277,6 +281,9 @@ const search2 = () => {
               case ('light rain'):
                   im2 = pioggia;
                   break;
+              case ('light snow'):
+                  im2 = neve;
+                  break;
               default:
                   im2= "";
               }
@@ -303,6 +310,9 @@ const search2 = () => {
                   break;
               case ('light rain'):
                   im3 = pioggia;
+                  break;
+              case ('light snow'):
+                  im3 = neve;
                   break;
               default:
                   im3 = "";
